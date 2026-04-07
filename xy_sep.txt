@@ -1,0 +1,136 @@
+ANALOG
+
+antilog_amplifier
+X: Vin, R, Is, temperature
+Y: Vout
+log_amplifier
+X: Vin, R, Is, temperature
+Y: Vout
+cb
+X: Rc, Re, Rb1, Rb2, RL, Vcc
+Y: Av, fH, Ic, Vce
+cc
+X: Re, Rb1, Rb2, RL, Vcc
+Y: Av, fH, Ie, Vce
+ce
+X: Rc, Re, Rb1, Rb2, RL, Vcc
+Y: Av, fH, Ic, Vce
+cs
+X: Rd, Rs, Rg1, Rg2, RL, Vdd
+Y: Av, fH, Id, Vds
+cg
+X: Rd, Rs, Rg1, Rg2, RL, Vdd
+Y: Av, fH, Id, Vds
+cd
+X: Rs, Rg1, Rg2, RL, Vdd
+Y: Av, fH, Id, Vds
+inverting
+X: Vin_V, Rin_ohm, Rf_ohm
+Y: Vout_V
+non_inverting
+X: Vin_V, R1_ohm, Rf_ohm
+Y: Vout_V
+voltage_follower
+X: Vin, load_resistance, frequency
+Y: Vout
+integrator
+X: Vin_V, R_ohm, C_f, freq_hz
+Y: Vout_V
+differentiator
+X: Vin_V, R_ohm, C_f, freq_hz
+Y: Vout_V
+opamp_comparator
+X: Vin, Vref, Vcc, Vee
+Y: Vout
+rc_lowpass
+X: R_ohm, C_f
+Y: cutoff_hz
+rl_lowpass
+X: R_ohm, L_h
+Y: cutoff_hz
+rl_highpass
+X: R_ohm, L_h
+Y: cutoff_hz
+rlc_parallel_bandpass
+X: R_ohm, L_h, C_f
+Y: center_freq_hz, bandwidth_hz, Q_factor
+rlc_series_bandpass
+X: R_ohm, L_h, C_f
+Y: center_freq_hz, bandwidth_hz, Q_factor
+half_wave_rectifier
+X: Vin_rms_V, Load_R_ohm, Frequency_Hz, Peak_voltage_V
+Y: Vdc_V, Vrms_out_V, Ripple_factor, Efficiency
+full_wave_rectifier
+X: Vin_rms_V, Load_R_ohm, Frequency_Hz, Peak_voltage_V
+Y: Vdc_V, Vrms_out_V, Ripple_factor, Efficiency
+clamper
+X: input_peak_voltage, diode_drop, load_resistance, capacitance, frequency, clamper_type
+Y: clamping_level, output_peak_voltage
+clipper
+X: input_peak_voltage, diode_drop, load_resistance, frequency, clipper_type
+Y: clipping_level, output_peak_voltage
+DIGITAL
+
+and_gate
+X: A, B, supply_voltage_V, propagation_delay_ns, temperature_C
+Y: Y
+or_gate
+X: A, B, supply_voltage_V, propagation_delay_ns, temperature_C
+Y: Y
+not_gate
+X: A, supply_voltage_V, propagation_delay_ns, temperature_C
+Y: Y
+nand_gate
+X: A, B, supply_voltage_V, propagation_delay_ns, temperature_C
+Y: Y
+nor_gate
+X: A, B, supply_voltage_V, propagation_delay_ns, temperature_C
+Y: Y
+xor_2input
+X: A, B
+Y: Y
+xnor_2input
+X: A, B
+Y: Y
+half_adder
+X: A, B
+Y: Sum, Carry
+full_adder
+X: A, B, Cin
+Y: Sum, Carry
+half_subtractor
+X: A, B
+Y: Diff, Borrow
+full_subtractor
+X: A, B, Bin
+Y: Diff, Borrow
+comparator
+X: A, B
+Y: A_gt_B, A_eq_B, A_lt_B
+encoder
+X: D0, D1, D2, D3, supply_voltage_V, propagation_delay_ns, temperature_C
+Y: A, B
+priority_encoder_large
+X: D3, D2, D1, D0, propagation_delay_ns, supply_voltage_V, temperature_C
+Y: Y1, Y0, Valid
+decoder
+X: A, B, supply_voltage_V, propagation_delay_ns, temperature_C
+Y: Y0, Y1, Y2, Y3
+mux
+X: I0, I1, I2, I3, S0, S1, supply_voltage_V, propagation_delay_ns, temperature_C
+Y: Y
+demux
+X: D, S0, S1, supply_voltage_V, propagation_delay_ns, temperature_C
+Y: Y0, Y1, Y2, Y3
+up_counter
+X: Q2, Q1, Q0, Mode
+Y: Next_Q2, Next_Q1, Next_Q0
+down_counter
+X: Q2, Q1, Q0, Mode
+Y: Next_Q2, Next_Q1, Next_Q0
+up_down_counter
+X: Q2, Q1, Q0, Mode
+Y: Next_Q2, Next_Q1, Next_Q0
+mod_n_counter
+X: Q2, Q1, Q0
+Y: Next_Q2, Next_Q1, Next_Q0, Mod
